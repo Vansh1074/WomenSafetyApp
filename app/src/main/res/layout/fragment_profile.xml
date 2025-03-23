@@ -1,0 +1,184 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16sp"
+    android:weightSum="10">
+
+    <!-- Profile Picture with Edit Icon -->
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="60sp"
+            android:backgroundTint="@color/red_500"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24sp"
+            android:layout_marginBottom="24sp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/ivProfilePicture"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circular_background" />
+
+            <!-- Edit Icon Overlay on Profile Picture -->
+            <ImageView
+                android:id="@+id/ivSelectImage"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@id/ivProfilePicture"
+                android:layout_alignEnd="@id/ivProfilePicture"
+                android:layout_marginBottom="10sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginEnd="4sp"
+                android:src="@drawable/ic_camera"
+                android:background="@drawable/circular_icon_background"
+                android:padding="5sp"
+                android:contentDescription="Edit Profile Picture"
+                android:alpha="0"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    <!-- Profile Details Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16sp"
+        android:elevation="2sp">
+
+        <!-- Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            app:hintTextColor="@color/grey_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:enabled="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            app:hintTextColor="@color/grey_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:inputType="textEmailAddress"
+                android:enabled="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Phone -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            app:hintTextColor="@color/grey_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone (+91)"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:inputType="phone"
+                android:enabled="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Address -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            app:hintTextColor="@color/grey_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:inputType="textPostalAddress"
+                android:enabled="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Date of Birth -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            app:hintTextColor="@color/grey_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date of Birth"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:inputType="date"
+                android:enabled="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Blood Group -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            app:hintTextColor="@color/grey_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBloodGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Blood Group"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:inputType="text"
+                android:enabled="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="Edit Profile"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            app:icon="@drawable/ic_edit_profile"
+            app:iconGravity="textStart"
+            app:iconSize="32sp"
+            android:backgroundTint="@color/red_500"/>
+    </LinearLayout>
+</LinearLayout>

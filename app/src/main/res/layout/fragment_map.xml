@@ -1,0 +1,53 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- Text Field for Live Coordinates -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/coordinates_text_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="top|center_horizontal"
+        app:boxBackgroundColor="@color/red_500">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/live_coordinates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Coordinates"
+            android:focusable="false"
+            android:editable="false"
+            android:textColor="@color/white"
+            android:textColorHint="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Center Pointer Icon -->
+    <ImageView
+        android:id="@+id/center_pointer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_location_pin"
+        android:layout_gravity="center"
+        android:layout_marginBottom="14sp"
+        android:contentDescription="Pointer"/>
+
+    <!-- TextView for Address -->
+    <TextView
+        android:id="@+id/address_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:text="Address"
+        android:padding="8dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:textSize="16sp"/>
+</FrameLayout>

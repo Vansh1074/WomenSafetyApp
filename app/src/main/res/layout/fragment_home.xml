@@ -1,0 +1,118 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:useDefaultMargins="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btEmergencyCall"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="Emergency Call"
+                android:textColor="@android:color/white"
+                app:icon="@drawable/ic_phone"
+                app:iconGravity="textTop"
+                app:iconSize="32dp"
+                android:backgroundTint="@color/red_500"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btShareLocation"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="Share Location"
+                android:textColor="@android:color/white"
+                app:icon="@drawable/ic_location"
+                app:iconGravity="textTop"
+                app:iconSize="32dp"
+                android:backgroundTint="@color/blue_500"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btSoundAlarm"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="Sound Alarm"
+                android:textColor="@android:color/white"
+                app:icon="@drawable/ic_bell"
+                app:iconGravity="textTop"
+                app:iconSize="32dp"
+                android:backgroundTint="@color/orange_500"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btCallPolice"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="(SOS)\nCall The Police"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                app:icon="@drawable/police_car"
+                app:iconGravity="textTop"
+                app:iconSize="50dp"
+                android:backgroundTint="#EC1414"/>
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="5sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Safety Tips"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:contentDescription="Providing Safety tips here">
+
+                    <include layout="@layout/alert_item_red"/>
+                    <include layout="@layout/alert_item_yellow"/>
+                    <include layout="@layout/alert_item_green"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Emergency Contacts to Call"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- RecyclerView for Contacts -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContacts"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="5"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/recycler_background"
+        android:padding="10sp"/>
+
+    <!-- Button to Add Contacts -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btAddContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Contacts"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_edit_profile"
+        app:iconGravity="textStart"
+        app:iconSize="32sp"
+        android:backgroundTint="@color/red_500"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Recipients to send Location"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- RecyclerView for Emails -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEmails"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="5"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/recycler_background"
+        android:padding="10sp"/>
+
+    <!-- Button to Add Emails -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btAddEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Emails"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_mail"
+        app:iconGravity="textStart"
+        app:iconSize="32sp"
+        android:backgroundTint="@color/red_500"
+        android:layout_marginBottom="10dp"
+        />
+
+</LinearLayout>
